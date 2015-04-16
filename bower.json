@@ -1,0 +1,24 @@
+{
+  "name": "purescript-zeroclipboard",
+  "homepage": "https://github.com/cryogenian/purescript-zeroclipboard",
+  "authors": [
+    "Maxim Zimaliev <zimaliev@yandex.ru>"
+  ],
+  "description": "purescript bindings for zeroclipboard library",
+  "keywords": [
+    "purescript",
+    "zeroclipboard",
+    "clipboard"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-simple-dom": "~0.0.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "purescript-zeroclipboard",
+  "description": "purescript binding for zeroclipboard library",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cryogenian/purescript-zeroclipboard.git"
+  },
+  "keywords": [
+    "purescript",
+    "zeroclipboard",
+    "clipboard"
+  ],
+  "author": "Maxim Zimaliev <zimaliev@gmail.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/cryogenian/purescript-zeroclipboard/issues"
+  },
+  "homepage": "https://github.com/cryogenian/purescript-zeroclipboard",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "mandragora-bucket": "^0.2.5",
+    "zeroclipboard": "^2.2.0"
+  }
+}
