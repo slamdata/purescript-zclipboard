@@ -1,11 +1,10 @@
 module Main where
 
+import Prelude
 import Control.Monad.Eff
 import DOM
 import Data.Maybe
 import Data.Tuple
-import Debug.Trace
-import Debug.Foreign
 import Data.DOM.Simple.Types
 import Data.DOM.Simple.Document
 import Data.DOM.Simple.Window
