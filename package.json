@@ -18,8 +18,13 @@
   },
   "homepage": "https://github.com/cryogenian/purescript-zeroclipboard",
   "dependencies": {
-    "gulp": "^3.8.11",
-    "mandragora-bucket": "^0.2.5",
+    "browserify": "^10.2.4",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-purescript": "^0.5.0",
+    "run-sequence": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
     "zeroclipboard": "^2.2.0"
   }
 }

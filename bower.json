@@ -1,6 +1,6 @@
 {
-  "name": "purescript-zeroclipboard",
-  "homepage": "https://github.com/cryogenian/purescript-zeroclipboard",
+  "name": "purescript-zclipboard",
+  "homepage": "https://github.com/slamdata/purescript-zclipboard",
   "authors": [
     "Maxim Zimaliev <zimaliev@yandex.ru>"
   ],
@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-simple-dom": "~0.0.2"
+    "purescript-eff": "^0.1.0",
+    "purescript-simple-dom": "6358414013eb3106d695e3e19488609f82d903e9"
   }
 }
