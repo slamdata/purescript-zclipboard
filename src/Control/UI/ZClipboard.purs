@@ -9,15 +9,14 @@ module Control.UI.ZClipboard (
   ) where
 
 import Prelude
-import DOM
-import Control.Monad.Eff
-import Data.Tuple
-import Data.Function
-import Data.DOM.Simple.Types
+
+import Control.Monad.Eff (Eff())
+import Data.Function (Fn2(), Fn3(), runFn2, runFn3)
+import DOM.Node.Types (Element())
 
 data Linked
 data NotLinked
-class IsLinked a 
+class IsLinked a
 
 instance linkedIsLinked :: IsLinked Linked
 instance notLinkedIsLinked :: IsLinked NotLinked
@@ -25,37 +24,37 @@ instance notLinkedIsLinked :: IsLinked NotLinked
 
 foreign import data ZCClient :: * -> *
 foreign import data ZClipboard :: *
-foreign import data ZCLIPBOARD :: ! 
+foreign import data ZCLIPBOARD :: !
 
 
 foreign import setDataImpl :: forall e. Fn3 ZClipboard String String
        (Eff (zClipboard :: ZCLIPBOARD|e) ZClipboard)
 
-setData :: forall e. String -> String -> ZClipboard -> 
+setData :: forall e. String -> String -> ZClipboard ->
            Eff (zClipboard :: ZCLIPBOARD|e) ZClipboard
 setData key val clipboard = runFn3 setDataImpl clipboard key val
 
 foreign import getDataImpl :: forall e. Fn2 ZClipboard String
        (Eff (zClipboard :: ZCLIPBOARD|e) String)
 
-getData :: forall e. String -> ZClipboard -> 
+getData :: forall e. String -> ZClipboard ->
            Eff (zClipboard :: ZCLIPBOARD|e) String
 getData key clipboard = runFn2 getDataImpl clipboard key
 
 foreign import clearDataImpl :: forall e. Fn2 ZClipboard String
-       (Eff (zClipboard :: ZCLIPBOARD|e) Unit) 
+       (Eff (zClipboard :: ZCLIPBOARD|e) Unit)
 
-clearData :: forall e. String -> ZClipboard -> 
+clearData :: forall e. String -> ZClipboard ->
              Eff (zClipboard :: ZCLIPBOARD|e) Unit
 clearData key clipboard = runFn2 clearDataImpl clipboard key
 
 foreign import init :: forall e. Eff (zClipboard :: ZCLIPBOARD|e) (ZCClient NotLinked)
 
 
-foreign import clip :: forall e. HTMLElement -> ZCClient NotLinked ->
+foreign import clip :: forall e. Element -> ZCClient NotLinked ->
        Eff (zClipboard :: ZCLIPBOARD|e) (ZCClient Linked)
 
-foreign import make :: forall e. HTMLElement ->
+foreign import make :: forall e. Element ->
        Eff (zClipboard :: ZCLIPBOARD|e) (ZCClient Linked)
 
 
