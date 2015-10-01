@@ -79,13 +79,13 @@ init :: forall e. Eff (zClipboard :: ZCLIPBOARD | e) (ZCClient NotLinked)
 #### `clip`
 
 ``` purescript
-clip :: forall e. HTMLElement -> ZCClient NotLinked -> Eff (zClipboard :: ZCLIPBOARD | e) (ZCClient Linked)
+clip :: forall e. Element -> ZCClient NotLinked -> Eff (zClipboard :: ZCLIPBOARD | e) (ZCClient Linked)
 ```
 
 #### `make`
 
 ``` purescript
-make :: forall e. HTMLElement -> Eff (zClipboard :: ZCLIPBOARD | e) (ZCClient Linked)
+make :: forall e. Element -> Eff (zClipboard :: ZCLIPBOARD | e) (ZCClient Linked)
 ```
 
 #### `onCopy`
