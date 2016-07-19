@@ -19,7 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-dom": "^0.2.6",
-    "purescript-eff": "^0.1.1"
+    "purescript-dom": "^1.0.0",
+    "purescript-eff": "^1.0.0"
   }
 }
