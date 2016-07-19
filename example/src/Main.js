@@ -1,7 +1,7 @@
-// module Main
+"use strict";
 
-exports.value = function(el) {
-    return function() {
-        return el.value;
-    };
+exports.value = function (el) {
+  return function () {
+    return el.value;
+  };
 };

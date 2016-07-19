@@ -1,10 +1,9 @@
-/node_modules/
+/.*
+!/.gitignore
+!/.travis.yml
+!/.jscsrc
+!/.jshintrc
 /bower_components/
-/tmp/
-/dist/
+/node_modules/
 /output/
-/coverage/
-public/*.js
-example/psc.js
-.psci_modules
-.psci
+/example/example.js
