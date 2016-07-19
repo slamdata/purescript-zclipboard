@@ -1,6 +1,9 @@
 {
   "name": "purescript-zclipboard",
-  "homepage": "https://github.com/slamdata/purescript-zclipboard",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-zclipboard.git"
+  },
   "authors": [
     "Maxim Zimaliev <zimaliev@yandex.ru>"
   ],
@@ -10,13 +13,15 @@
     "zeroclipboard",
     "clipboard"
   ],
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
+    "node_modules",
+    "output",
     "test",
-    "tests"
+    "bower.json",
+    "package.json"
   ],
   "dependencies": {
     "purescript-dom": "^1.0.0",
